@@ -57,10 +57,11 @@ class translation:
         }
 
         response = requests.request("POST", url, headers=headers, data=payload)
-        return response
+        return response.json()['result']['trans_result'][0]['dst']
 
     def get_access_token(self):
         url = "https://aip.baidubce.com/oauth/2.0/token"
         params = {"grant_type": "client_credentials", "client_id": "nbUZdYB5oOKJjmZvpmzimt6F",
                   "client_secret": "gaIRpzoDx2IBKtMVxwmWH8bLFko8zbmf"}
         self.access_token = str(requests.post(url, params=params).json().get("access_token"))
+
