@@ -59,8 +59,6 @@ class Rethinking_completion:
 
 
 
-if __name__ == '__main__':
-    chat = Rethinking_completion()
-    chat.chat(prompt=prompt_template)
+
 
 
