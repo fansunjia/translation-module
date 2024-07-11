@@ -9,8 +9,8 @@ from tqdm import tqdm
 import qianfan
 import requests
 import json
-os.environ["QIANFAN_ACCESS_KEY"] = "ALTAKCTIeA2uEd4DfIWxXypzuC"
-os.environ["QIANFAN_SECRET_KEY"] = "6fb99576e08343bf9554ab2b4322d741"
+os.environ["QIANFAN_ACCESS_KEY"] = ""
+os.environ["QIANFAN_SECRET_KEY"] = ""
 
 class translation:
     def __init__(self, LLM_name = None, translation_prompt = None):
@@ -61,7 +61,7 @@ class translation:
 
     def get_access_token(self):
         url = "https://aip.baidubce.com/oauth/2.0/token"
-        params = {"grant_type": "client_credentials", "client_id": "nbUZdYB5oOKJjmZvpmzimt6F",
-                  "client_secret": "gaIRpzoDx2IBKtMVxwmWH8bLFko8zbmf"}
+        params = {"grant_type": "client_credentials", "client_id": "",
+                  "client_secret": ""}
         self.access_token = str(requests.post(url, params=params).json().get("access_token"))
 
