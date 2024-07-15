@@ -32,7 +32,8 @@ class translation:
 
 
     def translate_LLM(self, text, from_language = "auto", to_language = "en"):
-        text_prompt = "翻译的目标语言是" + to_language + "，翻译的源语言是" + from_language + "，请翻译以下内容："+ text
+        text_prompt = "翻译的目标语言是" + to_language + "，翻译的源语言是" + from_language + "，请翻译以下内容："+ text+\
+                      "只返回翻译后的结果即可。"
         resp = self.chat_comp.do(model=self.LLM_name, messages=[{
             "syetem": self.translation_prompt,
             "role": "user",

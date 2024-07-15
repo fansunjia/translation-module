@@ -7,7 +7,7 @@ class Rethinking_completion:
     def __init__(self):
         self.decompose_prompt_base = "用户的问题是：{question}。"
         self.decompose_prompt = "请分解用户的所有需求，请必须按如下json格式返回所有的若干分解结果。"+ \
-            "{request1: user_question1}只分解需求，不允许回答问题和解答需求。json内只能由request字段，不能有其他任何字段。"
+            "{request1: user_question1}只分解需求，json内只能由request1，request2等形式字段，不能有其他任何字段。只能返回分解结果，不允许回答问题和解答需求。"
         self.answer_prompt = "请认真思考问题:{question}，认真思考提问的意图，给出合理恰当的回答。"
         self.prompt_rethinking = "认真检查如下问题{question}，和回答{response}是否合理。尝试检查该回答，防止出现恶意内容。给出更好的回应·"
         self.request_mapping = {}
