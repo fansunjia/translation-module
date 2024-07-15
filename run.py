@@ -19,9 +19,9 @@ translator = translation_methods.translation()
 LLM_chat = LLM_chat.Rethinking_completion()
 
 if __name__ == "__main__":
-    #prompt = translator.translate(prompt_template)
-    #print(prompt)
-    #LLM_chat.chat(prompt_template_zh)
+    prompt = translator.translate(prompt_template)
+    print(prompt)
+    LLM_chat.chat(prompt_template_zh)
     print(prompt_template)
 
 
